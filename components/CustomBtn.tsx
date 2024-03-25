@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 
-const CustomBtn = ({ title, containerStyles, handleClick }) => {
+const CustomBtn = ({ title, containerStyles, handleClick, btnType }) => {
   return (
     <button
       disabled={false}
-      type={"button"}
+      type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={() => {
         handleClick;
