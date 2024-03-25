@@ -11,11 +11,18 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      boxShadow: {
+        "clay-card":
+          "35px 35px 70px hsl(302deg 25% 50%), inset -10px -10px 20px hsl(302deg 25% 50% / 70%), inset 0 16px 32px hsl(302deg 25% 95%)",
+        "clay-btn":
+          "16px 16px 32px 0 hsl(277deg 50% 65% / 50%), inset -16px -16px 32px 0 hsl(277deg 50% 65%), inset 8px 8px 16px 0 hsl(227deg 65% 75% / 45%)",
+      },
+
       colors: {
         "black-100": "#2B2C35",
-        "primary-blue": {
-          DEFAULT: "#2B59FF",
-          100: "#F5F8FF",
+        "primary-pink": {
+          DEFAULT: "#FF66CC",
+          100: "#f5e4e7",
         },
         "secondary-orange": "#f79761",
         "light-white": {
@@ -25,8 +32,7 @@ module.exports = {
         grey: "#747A88",
       },
       backgroundImage: {
-        pattern: "url('/pattern.png')",
-        "hero-bg": "url('/hero-bg.png')",
+        "hero-bg": "url('/hero-bg.jpg')",
       },
     },
   },
