@@ -1,6 +1,12 @@
 import { Hero, SearchBar, CustomFilter } from "@/components";
+import fetchItems from "@/utils";
 
-export default function Home() {
+export default async function Home() {
+  const allItems = await fetchItems();
+
+  // console.log(allItems);
+  const isDataEmpty = allItems.length < 1 || !allItems;
+
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -16,6 +22,14 @@ export default function Home() {
             <CustomFilter title="year" />
           </div>
         </div>
+
+        {!isDataEmpty ? (
+          <section>we have items</section>
+        ) : (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold">No results</h2>
+          </div>
+        )}
       </div>
     </main>
   );
