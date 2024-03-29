@@ -5,7 +5,9 @@ import { SearchManufacturer } from ".";
 
 const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
-  const handleSearch = () => {};
+  const handleSearch = () => {
+    console.log("test");
+  };
   return (
     <form className="searchbar" onSubmit={handleSearch}>
       <div className="searchbar__item">

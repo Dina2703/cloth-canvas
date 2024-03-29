@@ -14,7 +14,7 @@ const Footer = () => {
               alt="cloth canvas logo"
               width={88}
               height={16}
-              className="object-contain   "
+              className="object-contain"
             />{" "}
             <span className="bg-orange-300 rounded-tl-md -skew-y-[26deg] rotate-[26deg] rounded-br-md  text-white lowercase italic px-2  text-[14px] shadow-sm absolute -bottom-1 left-12  ">
               Cloth Canvas
@@ -30,7 +30,11 @@ const Footer = () => {
             <div key={link.title} className="footer__link">
               <h3 className="font-bold">{link.title}</h3>
               {link.links.map((item) => (
-                <Link key={item.item} href={item.url} className="text-gray-500">
+                <Link
+                  key={Math.random()}
+                  href={item.url}
+                  className="text-gray-500"
+                >
                   {item.title}
                 </Link>
               ))}

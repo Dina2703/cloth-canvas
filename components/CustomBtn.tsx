@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const CustomBtn = ({ title, containerStyles, handleClick, btnType }) => {
   return (
     <button
