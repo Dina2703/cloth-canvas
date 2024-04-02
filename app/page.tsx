@@ -26,7 +26,7 @@ export default async function Home() {
         {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">
-              {allItems?.data?.products.map((item) => (
+              {allItems?.data?.products.slice(0, 6).map((item) => (
                 <ItemCard item={item} key={item.id} />
               ))}
             </div>
